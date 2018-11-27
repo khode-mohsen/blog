@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+	{% block body %}
+		<p><b>{{object.title}}
+		<hr>
+			{{object.content}}
+		{% if object.photo %}
+		<p>
+		<img src="{{object.photo.url}}" class="img-rounded">
+			<style>
+			img{
+				max-height:auto;
+				max-width:300px;
+				}
+			
+			</style>
+		{% endif %}
+		
+	{% endblock %}
